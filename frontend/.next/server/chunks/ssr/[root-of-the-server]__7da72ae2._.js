@@ -1,0 +1,3 @@
+module.exports=[93695,(a,b,c)=>{b.exports=a.x("next/dist/shared/lib/no-fallback-error.external.js",()=>require("next/dist/shared/lib/no-fallback-error.external.js"))},22854,a=>{a.n(a.i(14730))},76702,(a,b,c)=>{},61697,a=>{"use strict";a.s(["default",()=>c]);var b=a.i(41884);function c(){return(0,b.jsxs)("div",{className:"container py-5",children:[(0,b.jsx)("h1",{className:"h3 mb-3",children:"Contacto"}),(0,b.jsx)("p",{children:"Gracias por visitar Delicias. Pronto tendremos un formulario de contacto aquí. Mientras tanto, puedes escribirnos a soporte@delicias.local."})]})}}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__7da72ae2._.js.map

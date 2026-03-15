@@ -1,0 +1,3 @@
+module.exports=[53360,a=>{"use strict";a.s(["default",()=>d]);var b=a.i(88616);let c={sm:"rounded",md:"rounded-md",lg:"rounded-lg",xl:"rounded-xl"};function d({className:a="",rounded:d="md",style:e,...f}){let g=c[d]||"rounded-md",h=`skeleton ${g} ${a}`.trim();return(0,b.jsx)("div",{...f,className:h,style:e})}},69936,a=>{"use strict";a.s(["Badge",()=>b.default]);var b=a.i(1979)}];
+
+//# sourceMappingURL=Downloads_WEBNIDA_frontend_src_58b99ea1._.js.map

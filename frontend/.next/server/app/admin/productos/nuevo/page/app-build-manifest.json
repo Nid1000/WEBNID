@@ -1,0 +1,23 @@
+{
+  "pages": {
+    "/admin/productos/nuevo/page": [
+      "static/chunks/d99cc92055cfc7ea.js",
+      "static/chunks/47e1ad5aa6fc2be3.js",
+      "static/chunks/9d2a8734a852fe1e.js",
+      "static/chunks/0cf9af7e19d0dc90.js",
+      "static/chunks/edbf3b36dc211d5f.js",
+      "static/chunks/e6b99076e884650c.js",
+      "static/chunks/29c82a26d2bd93a4.css",
+      "static/chunks/2f870dd3870f455f.js",
+      "static/chunks/eccaeb0ec2129a60.js",
+      "static/chunks/c11377d07ed9d4fc.js",
+      "static/chunks/cad1dc7c4401156a.js",
+      "static/chunks/a853a81093fe85e5.js",
+      "static/chunks/fa9703c70f48a2cc.js",
+      "static/chunks/fff366c8dfaa4021.js",
+      "static/chunks/df800c515772f015.js",
+      "static/chunks/6de61baa00a50fc6.js",
+      "static/chunks/turbopack-597739d880dd7743.js"
+    ]
+  }
+}

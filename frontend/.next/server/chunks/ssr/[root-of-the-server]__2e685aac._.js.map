@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/usuario/Downloads/deliweb/frontend/src/app/historial/page.tsx"],"sourcesContent":["import { redirect } from \"next/navigation\";\n\nexport default function HistorialPage() {\n  // Alias de ruta para acceder al historial de compras\n  // Redirige a la página existente de órdenes/historial\n  redirect(\"/orders\");\n}"],"names":[],"mappings":";;;;AAAA;AAAA;;AAEe,SAAS;IACtB,qDAAqD;IACrD,sDAAsD;IACtD,IAAA,qOAAQ,EAAC;AACX","debugId":null}}]
+}

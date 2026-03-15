@@ -1,0 +1,45 @@
+{
+  "version": 3,
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/Downloads_deliweb_frontend_a38f52d0._.js",
+        "server/edge/chunks/[root-of-the-server]__6c5ce4ae._.js",
+        "server/edge/chunks/turbopack-Downloads_deliweb_frontend_edge-wrapper_6d2a562c.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/profile(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/profile"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/orders(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/orders"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/checkout(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/checkout"
+        },
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "originalSource": "/admin/:path*"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "DvHQGIlmHwrkf2ZidLfTgxcfpHAewouLMm/mLJhCEYQ=",
+        "__NEXT_PREVIEW_MODE_ID": "ac2752f8ca30cb5496e080df02256c05",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "b374f4338ea307f919ac7c21450cd68130869258b5ef02ed1279cc7e75182c73",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "f16a1d71ed1107167e06bcddf1eaf679f06a976d2c2ed3a6106214d27abf7a52"
+      }
+    }
+  },
+  "sortedMiddleware": [
+    "/"
+  ],
+  "functions": {}
+}
