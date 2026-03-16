@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
 
-// Apuntar explícitamente al backend NestJS en 5001 para evitar inconsistencias por variables de entorno.
-const API_BASE = "http://localhost:5001";
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://localhost:5001";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: process.cwd(),
+  },
   async rewrites() {
     return [
       {
@@ -17,7 +22,6 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
-    // Configurar calidades permitidas para evitar advertencias de Next 16
     qualities: [80],
     remotePatterns: [
       {
@@ -26,13 +30,11 @@ const nextConfig: NextConfig = {
         port: "5001",
         pathname: "/uploads/**",
       },
-      // Permitir imágenes de Unsplash usadas como fallback en productos
       {
         protocol: "https",
         hostname: "images.unsplash.com",
         pathname: "/**",
       },
-      // Permitir placeholders remotos si existen en datos (p.ej. via.placeholder.com)
       {
         protocol: "https",
         hostname: "via.placeholder.com",

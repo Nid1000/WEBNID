@@ -1,3 +1,0 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["chunks/Downloads_WEBNIDA_frontend_edge-wrapper_a83a783b.js",91777,(e,n,t)=>{self._ENTRIES||={};let h=Promise.resolve().then(()=>e.i(63862));h.catch(()=>{}),self._ENTRIES.middleware_middleware=new Proxy(h,{get(e,n){if("then"===n)return(n,t)=>e.then(n,t);let t=(...t)=>e.then(e=>(0,e[n])(...t));return t.then=(t,h)=>e.then(e=>e[n]).then(t,h),t}})}]);
-
-//# sourceMappingURL=Downloads_WEBNIDA_frontend_edge-wrapper_a83a783b.js.map

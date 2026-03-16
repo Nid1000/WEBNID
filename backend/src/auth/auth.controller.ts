@@ -1,4 +1,13 @@
-import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Post,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
@@ -24,6 +33,7 @@ export class AuthController {
   }
 
   @Post('login')
+  @HttpCode(HttpStatus.OK)
   async login(@Body() body: LoginDto, @Req() req: any) {
     const result = await this.authService.loginUsuario(
       body.email,
@@ -38,6 +48,7 @@ export class AuthController {
   }
 
   @Post('admin/login')
+  @HttpCode(HttpStatus.OK)
   async adminLogin(@Body() body: LoginDto, @Req() req: any) {
     const result = await this.authService.loginAdmin(
       body.email,

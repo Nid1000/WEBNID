@@ -148,6 +148,21 @@ export class PedidosService {
     const pedido = await this.prisma.pedido.findFirst({
       where: { id: pedidoId, usuario_id: usuarioId },
       include: {
+        usuario: {
+          select: {
+            id: true,
+            nombre: true,
+            apellido: true,
+            email: true,
+            telefono: true,
+            direccion: true,
+            distrito: true,
+          },
+        },
+        comprobantes: {
+          orderBy: { created_at: 'desc' },
+          take: 1,
+        },
         detalles: {
           include: {
             producto: { select: { nombre: true, imagen: true, precio: true } },
@@ -174,6 +189,22 @@ export class PedidosService {
           created_at: pedido.created_at,
           notas: pedido.notas || null,
           direccion_entrega: pedido.direccion_entrega || null,
+          distrito_entrega: pedido.distrito_entrega || null,
+          numero_casa_entrega: pedido.numero_casa_entrega || null,
+          telefono_contacto: pedido.telefono_contacto || null,
+          cliente_nombre: pedido.usuario
+            ? `${pedido.usuario.nombre} ${pedido.usuario.apellido}`.trim()
+            : null,
+          cliente_email: pedido.usuario?.email || null,
+          cliente_telefono: pedido.usuario?.telefono || null,
+          metodo_pago:
+            pedido.comprobantes.length > 0
+              ? pedido.comprobantes[0].tipo
+              : null,
+          comprobante_numero:
+            pedido.comprobantes.length > 0
+              ? pedido.comprobantes[0].numero_formateado
+              : null,
         },
         detalles: pedido.detalles.map((d) => ({
           producto_nombre: d.producto?.nombre || null,

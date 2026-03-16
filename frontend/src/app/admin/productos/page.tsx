@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
@@ -43,7 +43,7 @@ type Producto = {
   stock?: number;
 };
 
-export default function AdminProductosPage() {
+function AdminProductosPageContent() {
   const [productos, setProductos] = useState<Producto[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -413,5 +413,13 @@ export default function AdminProductosPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function AdminProductosPage() {
+  return (
+    <Suspense fallback={<div className="p-4">Cargando productos...</div>}>
+      <AdminProductosPageContent />
+    </Suspense>
   );
 }

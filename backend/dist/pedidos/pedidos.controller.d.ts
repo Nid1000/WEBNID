@@ -67,6 +67,14 @@ export declare class PedidosController {
             created_at: Date;
             notas: string | null;
             direccion_entrega: string | null;
+            distrito_entrega: string | null;
+            numero_casa_entrega: string | null;
+            telefono_contacto: string | null;
+            cliente_nombre: string | null;
+            cliente_email: string | null;
+            cliente_telefono: string | null;
+            metodo_pago: string | null;
+            comprobante_numero: string | null;
         };
         detalles: {
             producto_nombre: string | null;

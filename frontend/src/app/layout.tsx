@@ -35,11 +35,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)] antialiased">
+      <body
+        className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)] antialiased"
+        suppressHydrationWarning
+      >
         <Providers>
-          <ClientShell>
-            {children}
-          </ClientShell>
+          <ClientShell>{children}</ClientShell>
         </Providers>
       </body>
     </html>
